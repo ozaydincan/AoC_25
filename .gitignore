@@ -1,0 +1,50 @@
+# --------------------
+# Build artifacts
+# --------------------
+*.o
+*.a
+aoc
+build/
+
+# --------------------
+# Test binaries
+# --------------------
+test
+tests/*.o
+
+# --------------------
+# Coverage / profiling
+# --------------------
+*.gcno
+*.gcda
+*.gcov
+*.profraw
+*.profdata
+
+# --------------------
+# Sanitizers / diagnostics
+# --------------------
+*.dSYM/
+
+# --------------------
+# Editor / OS
+# --------------------
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --------------------
+# Inputs (tracked empty dir)
+# --------------------
+inputs/*
+!inputs/.gitkeep
+
+# --------------------
+# Logs / misc
+# --------------------
+*.log
+.clangd
+compile_commands.json
+
