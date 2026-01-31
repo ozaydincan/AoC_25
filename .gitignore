@@ -1,0 +1,28 @@
+# Build artifacts
+*.o
+aoc
+test
+build/
+
+# Coverage and profiling
+*.gcno
+*.gcda
+*.gcov
+*.profraw
+*.profdata
+
+# Sanitizer/diagnostics
+*.dSYM/
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/
+
+# Inputs (keep .gitkeep if you want directory)
+inputs/*
+!inputs/.gitkeep
+
+# Misc
+*.log
+.clangd
