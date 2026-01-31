@@ -25,8 +25,6 @@ I chose C to:
 - Write predictable, transparent code
 - Build reusable infrastructure
 
-**Maximum friction  maximum learning.**
-
 ---
 
 ## Repository Layout
