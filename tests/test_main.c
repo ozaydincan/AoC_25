@@ -5,6 +5,7 @@
 
 void test_day01_sample(void);
 void test_day02_sample(void);
+void test_day03_sample(void);
 
 TEST(test_str_trim) {
   char s[] = "  hello\t\n";
@@ -39,9 +40,9 @@ int main(int argc, char **argv) {
   if (argc > 1) {
     filter = argv[1];
   }
-  TestCase tests[] = {TEST_CASE(test_str_trim), TEST_CASE(test_str_split),
-                      TEST_CASE(test_vector_basic),
-                      TEST_CASE(test_day01_sample),
-                      TEST_CASE(test_day02_sample)};
+  TestCase tests[] = {
+      TEST_CASE(test_str_trim),     TEST_CASE(test_str_split),
+      TEST_CASE(test_vector_basic), TEST_CASE(test_day01_sample),
+      TEST_CASE(test_day02_sample), TEST_CASE(test_day03_sample)};
   return run_tests_filtered(tests, ARRAY_LEN(tests), filter);
 }
