@@ -1,5 +1,6 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -O2 -Iinclude
+CFLAGS ?= -Wall -Wextra -O2 -Iinclude
+LDFLAGS ?=
 CFLAGS_DEBUG=-Wall -Wextra -g -O0 -fsanitize=address,undefined -fno-omit-frame-pointer -Iinclude
 
 COMMON_SRC_ALL=$(wildcard src/common/*.c)
@@ -8,7 +9,7 @@ AOC_SRC=$(wildcard src/*.c src/day0[1-9]/day*.c src/day1[0-2]/day*.c) $(COMMON_S
 
 # build main binary
 aoc: $(AOC_SRC:.c=.o)
-	$(CC) $^ -o $@
+	$(CC) $(LDFLAGS) $^ -o $@
 
 # build tests (do NOT link day files except those under test)
 TEST_DAY_FILES=$(wildcard tests/test_day*.c)
